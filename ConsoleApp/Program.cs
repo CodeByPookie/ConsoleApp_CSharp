@@ -4,10 +4,10 @@ namespace ConsoldeApp
 {
 	class Program
 	{
-		static void Main() 
+		static void Main()
 		{
-			//Console.WriteLine("fun called");
-			GetUserData();
+			//GetUserData()
+			Operators();
 		}
 		static void GetUserData()
 		{
@@ -18,13 +18,52 @@ namespace ConsoldeApp
 			double weight = 45.76;
 			byte experienceYears = 3;
 
-			//Console.WriteLine($"Name: {name}\nAge: {Age}\nHeight: {height}\nIs Employed: {isEmployed}\nWeight: {weight}\nExperience Years: {experienceYears}");
-			
+			Console.WriteLine($"Name: {name}\nAge: {Age}\nHeight: {height}\nIs Employed: {isEmployed}\nWeight: {weight}\nExperience Years: {experienceYears}");
+
 			//Console.WriteLine("Name: " + name, "\n Age: " + Age); //This won’t work
 
 			Console.WriteLine("Name: {0}\nAge: {1}", name, Age); //String.Format
 			Console.WriteLine("Name: " + name + "\nAge: " + Age); //String Concatenation
 			Console.WriteLine($"Name: {name}\nAge: {Age}"); //String Interpolation
+		}
+		static void Operators()
+		{
+			int a = 10;
+			int b = 20;
+			//Arithmetic Operators
+			Console.WriteLine("a + b = " + (a + b));
+			Console.WriteLine("a - b = " + (a - b));
+			Console.WriteLine("a * b = " + (a * b));
+			Console.WriteLine("a / b = " + (a / b));
+			Console.WriteLine("a % b = " + (a % b));
+			//Relational Operators
+			Console.WriteLine("a == b: " + (a == b));
+			Console.WriteLine("a != b: " + (a != b));
+			Console.WriteLine("a > b: " + (a > b));
+			Console.WriteLine("a < b: " + (a < b));
+			Console.WriteLine("a >= b: " + (a >= b));
+			Console.WriteLine("a <= b: " + (a <= b));
+			//Logical Operators
+			bool x = true;
+			bool y = false;
+			Console.WriteLine("x && y: " + (x && y));
+			Console.WriteLine("x || y: " + (x || y));
+			Console.WriteLine("!x: " + (!x));
+			//Assignment Operators
+			int c = a; // c = 10
+			c += 5;    // c = c + 5
+			c -= 3;    // c = c - 3
+			c *= 2;    // c = c * 2
+			c /= 4;    // c = c / 4
+			c %= 3;    // c = c % 3
+			Console.WriteLine("Final value of c: " + c);
+			Console.WriteLine("-----------------------");
+			Console.WriteLine($" a= {a} \n b={b} \n c={c}");
+			Console.WriteLine("-----------------------");
+			Console.WriteLine("value 1: " + a + b * c); // a concatenates with b*c => value 1: 100
+			Console.WriteLine("value 2: " + ( a + b) * c); // value 2: 0 => 30 * 0
+			Console.WriteLine("value 3: " + a + ( b * c)); // value 3: 100 => same as value 1
+			Console.WriteLine($"value 4: { a + ( b * c)}"); // value 4: 10 + 0 => 10
 		}
 	}
 }
