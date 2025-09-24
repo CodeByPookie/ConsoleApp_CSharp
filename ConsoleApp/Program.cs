@@ -7,7 +7,8 @@ namespace ConsoldeApp
 		static void Main()
 		{
 			//GetUserData()
-			Operators();
+			//Operators();
+			Triangle();
 		}
 		static void GetUserData()
 		{
@@ -64,6 +65,44 @@ namespace ConsoldeApp
 			Console.WriteLine("value 2: " + ( a + b) * c); // value 2: 0 => 30 * 0
 			Console.WriteLine("value 3: " + a + ( b * c)); // value 3: 100 => same as value 1
 			Console.WriteLine($"value 4: { a + ( b * c)}"); // value 4: 10 + 0 => 10
+		}
+		static void Triangle()
+		{
+			int rows = 5;
+			for (int i = 1; i <= rows; i++)
+			{
+				Console.WriteLine(new string('*', i));
+			}			
+			Console.WriteLine("--------------------------------");
+
+			for (int i = rows; i >= 1; i--)
+			{
+				Console.WriteLine(new string('*', i));
+			}
+				
+			Console.WriteLine("--------------------------------");
+			for (int i = 1; i <= rows; i++)
+			{
+				Console.WriteLine(new string(' ', rows - i) + new string('*', i));
+			}
+			Console.WriteLine("--------------------------------");
+
+			for (int i = rows; i >= 1; i--)
+			{
+				Console.WriteLine(new string(' ', rows - i) + new string('*', i));
+			}
+			Console.WriteLine("--------------------------------");
+			int n = 5;
+			// Upper pyramid
+			for (int i = 1; i <= n; i++)
+			{
+				Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
+			}
+			// Lower inverted pyramid
+			for (int i = n - 1; i >= 1; i--)
+			{
+				Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
+			}
 		}
 	}
 }
