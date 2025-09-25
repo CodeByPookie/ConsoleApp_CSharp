@@ -8,7 +8,9 @@ namespace ConsoldeApp
 		{
 			//GetUserData()
 			//Operators();
-			Triangle();
+			//Triangle();
+			customNamespace.CustomClass customObj = new customNamespace.CustomClass();
+			customObj.DisplayMessage();
 		}
 		static void GetUserData()
 		{
@@ -103,6 +105,15 @@ namespace ConsoldeApp
 			{
 				Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
 			}
+		}
+	}
+}
+namespace customNamespace
+{	class CustomClass
+	{
+		public void DisplayMessage()
+		{
+			Console.WriteLine("Hello from CustomClass in customNamespace!");
 		}
 	}
 }
